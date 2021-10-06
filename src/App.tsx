@@ -15,7 +15,14 @@ type IState = {
 };
 
 function App() {
-  const [people, setPeople] = useState<IState["people"]>([]);
+  const [people, setPeople] = useState<IState["people"]>([
+    {
+      name: "Some Dude",
+      age: 36,
+      url: "https://www.placecage.com/200/300",
+      note: "Do not feed after midnight!",
+    },
+  ]);
 
   return (
     <div className="App">
