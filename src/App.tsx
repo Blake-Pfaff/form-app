@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+//comps
+import List from "./components/List";
 
 import "./App.css";
 
+//Types
 type IState = {
   people: {
     name: string;
@@ -14,13 +17,10 @@ type IState = {
 function App() {
   const [people, setPeople] = useState<IState["people"]>([]);
 
-  people.map((person) => {
-    person.name;
-  });
-
   return (
     <div className="App">
       <h1>People Invited to the party</h1>
+      <List people={people} />
     </div>
   );
 }
